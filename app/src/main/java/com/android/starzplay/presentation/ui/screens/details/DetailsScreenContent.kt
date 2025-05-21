@@ -54,21 +54,25 @@ fun DetailsScreenContent(
             }
         }
 
-        CommonText(value = "${item.title}", textSize = 18.sp)
+        CommonText(value = "${item.title ?: item.movieCategory}", textSize = 18.sp)
 
-        CommonText(value = "${item.overview}", textSize = 18.sp, maxLines = Int.MAX_VALUE)
-
-        Button(
-            onClick = {
-                onPlayClick(VIDEO_URL.encodeUrl())
-            },
-        ) {
-            CommonText(
-                value = stringResource(R.string.play_video),
-                textSize = 14.sp,
-                textColor = Color.White
-            )
-            Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Play")
+        item.overview?.let {
+            CommonText(value = it, textSize = 18.sp, maxLines = Int.MAX_VALUE)
         }
+
+//        if (item.video == true){
+            Button(
+                onClick = {
+                    onPlayClick(VIDEO_URL.encodeUrl())
+                },
+            ) {
+                CommonText(
+                    value = stringResource(R.string.play_video),
+                    textSize = 14.sp,
+                    textColor = Color.White
+                )
+                Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Play")
+            }
+//        }
     }
 }
