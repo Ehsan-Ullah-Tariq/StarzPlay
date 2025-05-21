@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">StarzPlay</string>
+    <string name="select_a_language">Select a Language</string>
+    <string name="change_language">Change Language</string>
+    <string name="search_movies">Search movies…</string>
+    <string name="starz_play">Starz Play</string>
+    <string name="dropdown">DropDown</string>
+    <string name="no_results_found">No results found</string>
+    <string name="play_video">Play Video</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="video_player">Video Player</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="language">Language</string>
+    <string name="image">Image</string>
+</resources>
